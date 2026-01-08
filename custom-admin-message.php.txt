@@ -1,0 +1,21 @@
+<?php
+/**
+ * Plugin Name: Custom Admin Message
+ * Plugin URI: https://github.com/your-username/wordpress-custom-plugin
+ * Description: Displays a custom welcome message in WordPress admin dashboard.
+ * Version: 1.0
+ * Author: Your Name
+ * License: GPL2
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
+function cam_add_admin_notice() {
+    echo '<div class="notice notice-success is-dismissible">
+        <p><strong>Welcome!</strong> This is a custom admin message plugin.</p>
+    </div>';
+}
+
+add_action( 'admin_notices', 'cam_add_admin_notice' );
